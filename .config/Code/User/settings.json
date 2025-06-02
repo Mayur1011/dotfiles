@@ -1,0 +1,78 @@
+{
+    "terminal.integrated.fontFamily": "Iosevka Nerd Font",
+    "editor.fontLigatures": true,
+    "terminal.integrated.fontLigatures": true,
+    "editor.fontFamily": "Iosevka Nerd Font, 'Droid Sans Mono', 'monospace', monospace",
+    "redhat.telemetry.enabled": false,
+    "editor.mouseWheelZoom": true,
+    "editor.formatOnSave": true,
+    "code-runner.runInTerminal": true,
+    "code-runner.saveFileBeforeRun": true,
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    /*
+
+    https://github.com/glennraya/vscode-settings-json/blob/main/settings.json
+
+    */
+    "diffEditor.ignoreTrimWhitespace": false,
+    "workbench.editor.enablePreview": false,
+    "editor.snippetSuggestions": "top",
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true,
+    // "workbench.editor.showTabs": "none", // hides the tabs on top.
+    "breadcrumbs.enabled": false, // hides the current location from the top
+    "editor.minimap.enabled": false, // disables the minimap
+    "editor.hover.enabled": true,
+    "editor.cursorSurroundingLines": 10,
+    "supermaven.enable": {
+        "*": true,
+        "java": true
+    },
+    "debug.onTaskErrors": "debugAnyway",
+    "workbench.sideBar.location": "right",
+    "window.density.editorTabHeight": "compact",
+    "window.menuBarVisibility": "toggle", // Alt for toggle
+    "glassit.alpha": 235,
+    "workbench.colorTheme": "Dark Space Black",
+    /*
+
+    VIM SETTINGS
+
+    */
+    "vim.leader": "<Space>",
+    "vim.useSystemClipboard": true,
+    "vim.hlsearch": true,
+    "vim.smartRelativeLine": true,
+    "vim.highlightedyank.enable": true,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<Esc>"
+            ],
+            "when": [
+                "editorFocus"
+            ],
+            "commands": [
+                ":nohl"
+            ],
+            "silent": true
+        }
+    ],
+    "vim.insertModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "j",
+                "k"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        }
+    ],
+    "vim.handleKeys": {
+        "<C-f>": false,
+    },
+    "extensions.experimental.affinity": {
+        "vscodevim.vim": 1
+    }
+}
