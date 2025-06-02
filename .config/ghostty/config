@@ -1,0 +1,10 @@
+theme="/home/mayur/.cache/wal/colors-ghostty"
+font-family=Iosevka Nerd Font
+font-size=17
+background-opacity = 0.9
+
+
+keybind = ctrl+shift+left=goto_split:left
+keybind = ctrl+shift+down=goto_split:bottom
+keybind = ctrl+shift+up=goto_split:top
+keybind = ctrl+shift+right=goto_split:right
