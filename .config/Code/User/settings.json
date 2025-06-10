@@ -34,6 +34,13 @@
     "window.menuBarVisibility": "toggle", // Alt for toggle
     "glassit.alpha": 235,
     "workbench.colorTheme": "Dark Space Black",
+    "editor.codeActionsOnSave": {
+        "source.addMissingImports": "always",
+        "source.organizeImports": "always",
+    },
+    "editor.linkedEditing": true,
+    "editor.suggest.insertMode": "replace",
+    // typescript
     /*
 
     VIM SETTINGS
@@ -47,6 +54,7 @@
     "vim.useCtrlKeys": true,
     "vim.highlightedyank.enable": true,
     "vim.autoindent": true,
+    "vim.foldfix": true,
     "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": [
