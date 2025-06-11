@@ -6,14 +6,6 @@ format = """
 $directory\
 $git_branch\
 $git_status\
-$c\
-$rust\
-$golang\
-$nodejs\
-$java\
-$haskell\
-$python\
-$docker_context\
 $fill\
 $time\
 $line_break$character"""
@@ -81,13 +73,6 @@ style_user = "fg:blue"
 style_root = "fg:blue"
 format = '[ $user ]($style)'
 
-# Local IP Module
-[localip]
-ssh_only = false
-style = "fg:surface0"
-format = '[ $localipv4 ]($style)'
-disabled = false
-
 # Directory Module
 [directory]
 style = "fg:peach"
@@ -118,42 +103,6 @@ format = '[[($all_status$ahead_behind )](fg:green)]($style)'
 symbol = ""
 style = "fg:teal"
 format = '[[ $symbol( $version) ](fg:teal)]($style)'
-
-# C Module
-[c]
-symbol = " "
-style = "fg:teal"
-format = '[[ $symbol( $version) ](fg:teal)]($style)'
-
-# Rust Module
-[rust]
-symbol = ""
-style = "fg:teal"
-format = '[[ $symbol( $version) ](fg:teal)]($style)'
-
-# Go Module
-[golang]
-symbol = ""
-style = "fg:teal"
-format = '[[ $symbol( $version) ](fg:teal)]($style)'
-
-# Java Module
-[java]
-symbol = " "
-style = "fg:teal"
-format = '[[ $symbol( $version) ](fg:teal)]($style)'
-
-# Python Module
-[python]
-symbol = ""
-style = "fg:teal"
-format = '[[ $symbol( $version) ](fg:teal)]($style)'
-
-# Docker Context Module
-[docker_context]
-symbol = ""
-style = "fg:mantle"
-format = '[[ $symbol( $context) ](fg:color_bg3)]($style)'
 
 # Time Module
 [time]
