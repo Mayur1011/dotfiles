@@ -1,3 +1,4 @@
+add_newline = false
 format = "$character$directory$git_branch$git_status$custom "
 
 palette = 'nord'
