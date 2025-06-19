@@ -53,6 +53,8 @@
     "terminal.integrated.fontLigatures": true,
     "editor.fontFamily": "Iosevka Nerd Font, 'Droid Sans Mono', 'monospace', monospace",
     "editor.fontLigatures": true,
+    "editor.smoothScrolling": true,
+    "editor.cursorBlinking": "smooth",
     "redhat.telemetry.enabled": false,
     "editor.mouseWheelZoom": true,
     "editor.formatOnSave": true,
@@ -61,7 +63,6 @@
     "terminal.integrated.enableMultiLinePasteWarning": "never",
     // https://github.com/glennraya/vscode-settings-json/blob/main/settings.json
     "diffEditor.ignoreTrimWhitespace": false,
-    "workbench.editor.enablePreview": false,
     "editor.snippetSuggestions": "top",
     "files.trimTrailingWhitespace": true,
     "files.trimFinalNewlines": true,
@@ -74,20 +75,38 @@
         "*": true,
         "java": true
     },
+    "editor.tokenColorCustomizations": {
+        "comments": "#ffffff6e"
+    },
     "debug.onTaskErrors": "debugAnyway",
     "workbench.sideBar.location": "right",
     // "workbench.activityBar.location": "top",
     "window.customTitleBarVisibility": "never", // Change this if you want to see the title bar + settings button + account button
-    "window.density.editorTabHeight": "compact",
-    "window.menuBarVisibility": "toggle", // Alt for toggle
+    "window.density.editorTabHeight": "compact", // Alt for toggle
+    "window.menuBarVisibility": "toggle",
+    "window.titleBarStyle": "native",
     "window.restoreWindows": "none",
     "workbench.startupEditor": "none",
     "glassit.alpha": 235,
-    "workbench.colorTheme": "Vesper Black",
+    "workbench.colorCustomizations": {
+        "editor.background": "#000000",
+        "editor.selectionBackground": "#ffffff30",
+        // "activityBarTop.background": "#000000",
+        "editorGutter.background": "#000000",
+        "editor.lineHighlightBackground": "#000000",
+        "sideBar.background": "#000000",
+        "activityBar.background": "#000000",
+        "statusBar.background": "#000000",
+        "editorGroupHeader.tabsBackground": "#000000",
+        "tab.inactiveBackground": "#000000",
+        "tab.activeBorder": "#ffffff",
+    },
     "editor.codeActionsOnSave": {
         "source.addMissingImports": "always",
         "source.organizeImports": "always",
     },
-    "editor.linkedEditing": true,
-    "editor.suggest.insertMode": "replace",
+    // "editor.linkedEditing": true,
+    // "editor.suggest.insertMode": "replace",
+    "editor.bracketPairColorization.enabled": false,
+    "workbench.colorTheme": "Tsoding Dark Theme",
 }

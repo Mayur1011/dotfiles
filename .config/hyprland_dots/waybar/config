@@ -6,9 +6,6 @@
     "modules-left": [
         "hyprland/workspaces"
     ],
-    "modules-center": [
-        "hyprland/window"
-    ],
     "modules-right": [
         "tray",
         "power-profiles-daemon",
@@ -44,14 +41,14 @@
         "spacing": 10
     },
     "clock": {
-        "format": "<b>{:%I:%M %p }</b>",
+        "format": "<b>{:%I:%M %p}</b>",
         "format-alt": "<b>{:%a %d,%b}</b>",
         "tooltip-format": "<tt><small>{calendar}</small></tt>"
     },
     "battery": {
         "interval": 10,
         "states": {
-            "warning": 40
+            "warning": 20
         },
         "format": "{icon}",
         "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
@@ -93,7 +90,8 @@
     },
     "custom/power": {
         "format": "󰐥",
-        "on-click": "wlogout"
+        "on-click": "wlogout --buttons-per-row $(cat ~/.config/wlogout/layout | jq length | wc -l)",
+        "tooltip": false
     },
     "power-profiles-daemon": {
         "format": "{icon}",
@@ -106,11 +104,6 @@
             "power-saver": ""
         }
     },
-    "image": {
-        "path": "/home/adxthya/.config/waybar/nix.svg",
-        "size": 20,
-        "interval": 5
-    },
     "bluetooth": {
       // "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
       "format": "󰂯",
@@ -120,13 +113,6 @@
       "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
       "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
       "on-click": "blueman-manager"
-    },
-    "custom/spotify": {
-        "interval": 1,
-        "return-type": "json",
-        "exec": "~/.config/scripts/music",
-        "on-click": "playerctl play-pause",
-        "escape": true
     },
     "custom/notification": {
         "tooltip": false,
@@ -148,13 +134,27 @@
         "on-click-right": "sleep 0.1 && swaync-client -d -sw",
         "escape": true
     },
-    "custom/weather": {
-        "exec": "~/.config/scripts/weather",
-        "interval": 3600,
-        "format": "{}",
-        "return-type": "text"
-    }
 
+    "custom/swaync": {
+        "tooltip":true,     
+        "format": "{icon} {}",
+        "format-icons": {
+            "notification": " <span foreground='red'><sup></sup></span>",
+            "none": " ",
+            "dnd-notification": " <span foreground='red'><sup></sup></span>",
+            "dnd-none": " ",
+            "inhibited-notification": " <span foreground='red'><sup></sup></span>",
+            "inhibited-none": " ",
+            "dnd-inhibited-notification": " <span foreground='red'><sup></sup></span>",
+            "dnd-inhibited-none": " "
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "sleep 0.1 && swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true
+    }
 }
 
 // vim: ft=jsonc

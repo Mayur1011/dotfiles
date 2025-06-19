@@ -100,8 +100,17 @@ button {
   margin: 4px 0 4px 10px;
 }
 
-#clock,
-#battery,
+#tray,
+#clock
+{
+  color: @text;
+}
+
+#battery {
+  padding: 0 3px;
+  color: @text;
+}
+
 #cpu,
 #memory,
 #disk,
@@ -111,8 +120,8 @@ button {
 #network.disconnected,
 #wireplumber,
 #custom-pacman,
+#custom-swaync,
 #custom-power,
-#tray,
 #mode,
 #idle_inhibitor,
 #scratchpad,
@@ -233,6 +242,10 @@ button {
   border-radius: 10px;
   padding: 0 10px;
   margin: 5px 10px 0 0;
+}
+
+#custom-swaync {
+  color: white;
 }
 
 #custom-spotify {
