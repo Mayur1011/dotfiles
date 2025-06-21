@@ -19,4 +19,5 @@ require('lazy').setup({
     require 'plugins.telescope',
     require 'plugins.indent-blankline',
     require 'plugins.whichkey',
+    require 'plugins.vim-be-better'
 })
