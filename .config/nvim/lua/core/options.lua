@@ -15,6 +15,7 @@ vim.o.expandtab = true
 vim.o.scrolloff = 5
 vim.opt.termguicolors = true
 vim.o.undofile = true -- Save undo history (default: false)
+vim.o.background = "dark"
 vim.opt.showmode = false
 
 
