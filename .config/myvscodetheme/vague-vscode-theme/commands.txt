@@ -1,0 +1,9 @@
+1. Remove the extension from vscode : code --unistall-extension undefined_publisher.vague-vscode.theme
+2. Remove the extension folder : rm vague-vscode-theme-0.0.1.vsix
+3. To create extension : vsce package
+4. To install extension : code --install-extension vague-vscode-theme-0.0.1.vsix
+
+
+
+
+To list all extension : code --list-extensions

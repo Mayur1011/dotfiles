@@ -1,0 +1,39 @@
+#!/bin/sh
+
+if [ "$#" -ne 1 ]; then
+    exit 1
+fi
+
+IMAGE="$1"
+WAL_PATH="${HOME}/.local/bin/wal"
+ROFI_WAL_PATH="${HOME}/.config/rofi/scripts/pywal.sh"
+PROGRAM="swww-daemon"
+WALL_DIR="$HOME/Pictures/wallpapers"
+
+# swww img "$IMAGE" --transition-type="center" --transition-step=1 --transition-fps="60"
+
+# wal -i "$IMAGE"
+
+
+if pgrep "$PROGRAM" >/dev/null; then
+    swww img "$IMAGE" --transition-fps 244 --transition-type center --transition-duration 1
+else
+    swww-daemon && swww img "$IMAGE" --transition-fps 244 --transition-type center --transition-duration 1 
+fi
+
+$WAL_PATH -n --cols16 lighten --contrast 4 -i "$IMAGE"
+$ROFI_WAL_PATH
+
+# Set same image for hyprlock
+LOCKSCREEN_BG_PATH="${HOME}/.config/lockscreenbg"
+IMAGE_FULL_PATH="${WALL_DIR}/${IMAGE}"
+ln -sf "$IMAGE_FULL_PATH" "$LOCKSCREEN_BG_PATH"
+
+# Wallpaper for wlogout
+# cp "$IMAGE" "${HOME}/.config/wlogout/bg.jpg"
+
+${HOME}/.config/hypr/scripts/restart-waybar.sh
+
+notify-send "Theme applied"
+
+

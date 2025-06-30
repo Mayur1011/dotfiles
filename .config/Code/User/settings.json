@@ -51,7 +51,6 @@
     */
     "terminal.integrated.fontFamily": "Iosevka Nerd Font",
     "terminal.integrated.fontLigatures": true,
-    "editor.fontFamily": "Iosevka Nerd Font, 'Droid Sans Mono', 'monospace', monospace",
     "editor.fontLigatures": true,
     "editor.smoothScrolling": true,
     "editor.cursorBlinking": "smooth",
@@ -76,7 +75,19 @@
         "java": true
     },
     "editor.tokenColorCustomizations": {
-        "comments": "#ffffff4a"
+        "comments": "#ffffff4a",
+        "textMateRules": [
+            {
+                "scope": [
+                    "comment",
+                    "comment.block.documentation",
+                    "comment.line.double-slash"
+                ],
+                "settings": {
+                    "fontStyle": "" // remove italics
+                }
+            }
+        ]
     },
     "debug.onTaskErrors": "debugAnyway",
     "workbench.sideBar.location": "right",
@@ -100,6 +111,9 @@
         "editorGroupHeader.tabsBackground": "#000000",
         "tab.inactiveBackground": "#000000",
         "tab.activeBorder": "#ffffff",
+        // make the background of suggestions black
+        "editorSuggestWidget.background": "#000000",
+        "editorSuggestWidget.border": "#ffffff",
     },
     "editor.codeActionsOnSave": {
         "source.addMissingImports": "always",
@@ -108,5 +122,7 @@
     "editor.linkedEditing": true,
     "editor.suggest.insertMode": "replace",
     "editor.bracketPairColorization.enabled": false,
-    "workbench.colorTheme": "Tsoding Dark Theme",
+    "editor.fontSize": 22,
+    "editor.fontFamily": "Iosevka Nerd Font, monospace",
+    "workbench.colorTheme": "Vague Matched Theme",
 }
