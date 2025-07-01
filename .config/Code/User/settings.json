@@ -9,7 +9,6 @@
     "vim.hlsearch": true,
     "vim.incsearch": true,
     "vim.smartRelativeLine": true,
-    "vim.useCtrlKeys": true,
     "vim.highlightedyank.enable": true,
     "vim.autoindent": true,
     "vim.foldfix": true,
@@ -75,7 +74,7 @@
         "java": true
     },
     "editor.tokenColorCustomizations": {
-        "comments": "#ffffff4a",
+        "comments": "#ffffff34",
         "textMateRules": [
             {
                 "scope": [
