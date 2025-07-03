@@ -1,8 +1,8 @@
-local function enable_transparency()
-    vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-    vim.api.nvim_set_hl(0, "LineNr", { bg = "none" })
-end
+-- local function enable_transparency()
+--     vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+--     vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+--     vim.api.nvim_set_hl(0, "LineNr", { bg = "none" })
+-- end
 
 --[[
     {
@@ -18,14 +18,23 @@ end
     }
 ]]
 
--- return { 
---     'killitar/obscure.nvim',
--- 	lazy = false,
---     priority = 1000,
---     init = function()
---         vim.cmd("colorscheme obscure")
---     end
--- }
+return {
+    "blazkowolf/gruber-darker.nvim",
+    priority = 1000, -- make sure to load this before all the other start plugins
+    opts = {
+        bold = false,
+        italic = {
+            strings = false,
+        },
+    },
+    config = function()
+        require('gruber-darker').setup {
+            style = 'darker'
+        }
+        -- Enable theme
+        require('gruber-darker').load()
+    end
+}
 
 -- return { 
 --     'Mofiqul/vscode.nvim',
@@ -36,25 +45,16 @@ end
 --     end
 -- }
 
-
 -- return {
---     "ring0-rootkit/ring0-dark.nvim",
---     priority = 1000, -- Make sure to load this before all the other start plugins.
+--     "slugbyte/lackluster.nvim",
+--     lazy = false,
+--     priority = 1000,
 --     init = function()
---         vim.cmd.colorscheme("ring0dark")
---     end,
+--         -- vim.cmd.colorscheme("lackluster")
+--         vim.cmd.colorscheme("lackluster-hack") -- my favorite
+--         -- vim.cmd.colorscheme("lackluster-mint")
+--     end
 -- }
-
-return {
-    "slugbyte/lackluster.nvim",
-    lazy = false,
-    priority = 1000,
-    init = function()
-        -- vim.cmd.colorscheme("lackluster")
-        vim.cmd.colorscheme("lackluster-hack") -- my favorite
-        -- vim.cmd.colorscheme("lackluster-mint")
-    end
-} 
 
 
 -- return {
@@ -71,5 +71,16 @@ return {
 --         vim.cmd.colorscheme('zenbones')
 --     end
 -- }
---
 
+-- return {
+--     "metalelf0/black-metal-theme-neovim",
+--     lazy = false,
+--     priority = 1000,
+--     config = function()
+--         require("black-metal").setup({
+--             -- optional configuration here
+--             theme = "immortal",
+--         })
+--         require("black-metal").load()
+--     end,
+-- }

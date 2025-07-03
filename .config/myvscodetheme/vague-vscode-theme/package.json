@@ -1,7 +1,7 @@
 {
     "name": "vague-vscode-theme",
-    "displayName": "Vague Matched Theme",
-    "description": "A VS Code theme matching vague.nvim (non-italic, soft purple/gray tones)",
+    "displayName": "Mayur Dark",
+    "description": "A VS Code theme matching which is minimal (non-italic, soft purple/gray tones)",
     "version": "0.0.1",
     "engines": {
         "vscode": "^1.50.0"
@@ -12,7 +12,7 @@
     "contributes": {
         "themes": [
             {
-                "label": "Vague Matched Theme",
+                "label": "Mayur Dark",
                 "uiTheme": "vs-dark",
                 "path": "./themes/Vague-Matched-Theme-color-theme.json"
             }

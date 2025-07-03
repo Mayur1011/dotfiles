@@ -7,8 +7,6 @@ return {
         { "antosha417/nvim-lsp-file-operations", config = true },
     },
     config = function()
-        -- NOTE: LSP Keybinds
-
         vim.api.nvim_create_autocmd("LspAttach", {
             group = vim.api.nvim_create_augroup("UserLspConfig", {}),
             callback = function(ev)
@@ -51,6 +49,19 @@ return {
                 vim.keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
 
                 vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
+
+
+                -- Format on Save
+                -- local client = vim.lsp.get_client_by_id(ev.data.client_id)
+                -- if client and client.server_capabilities.documentFormattingProvider then
+                --     vim.api.nvim_create_autocmd("BufWritePre", {
+                --         group = vim.api.nvim_create_augroup("LspFormatOnSave", { clear = false }),
+                --         buffer = ev.buf,
+                --         callback = function()
+                --             vim.lsp.buf.format({ bufnr = ev.buf })
+                --         end,
+                --     })
+                -- end
             end,
         })
 
@@ -71,15 +82,15 @@ return {
         -- Set the diagnostic config with all icons
         vim.diagnostic.config({
             signs = {
-                text = signs -- Enable signs in the gutter
+                text = signs          -- Enable signs in the gutter
             },
-            virtual_text = true,  -- Specify Enable virtual text for diagnostics
-            underline = true,     -- Specify Underline diagnostics
-            update_in_insert = false,  -- Keep diagnostics active in insert mode
+            virtual_text = true,      -- Specify Enable virtual text for diagnostics
+            underline = true,         -- Specify Underline diagnostics
+            update_in_insert = false, -- Keep diagnostics active in insert mode
         })
 
 
-        -- NOTE : 
+        -- NOTE :
         -- Moved back from mason_lspconfig.setup_handlers from mason.lua file
         -- as mason setup_handlers is deprecated & its causing issues with lsp settings
         --

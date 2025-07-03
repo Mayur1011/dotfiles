@@ -10,6 +10,7 @@
     "vim.incsearch": true,
     "vim.smartRelativeLine": true,
     "vim.highlightedyank.enable": true,
+    "vim.highlightedyank.color": "#cccccc",
     "vim.autoindent": true,
     "vim.foldfix": true,
     "vim.normalModeKeyBindingsNonRecursive": [
@@ -123,5 +124,5 @@
     "editor.bracketPairColorization.enabled": false,
     "editor.fontSize": 22,
     "editor.fontFamily": "Iosevka Nerd Font, monospace",
-    "workbench.colorTheme": "Vague Matched Theme",
+    "workbench.colorTheme": "Tsoding Gruber Darker",
 }

@@ -1,6 +1,6 @@
 return {
     "hrsh7th/nvim-cmp",
-    -- event = "InsertEnter",
+    event = "InsertEnter",
     branch = "main", -- fix for deprecated functions coming in nvim 0.13
     dependencies = {
         "hrsh7th/cmp-buffer", -- source for text in buffer
@@ -201,6 +201,9 @@ return {
 
         -- loads vscode style snippets from installed plugins (e.g. friendly-snippets)
         require("luasnip.loaders.from_vscode").lazy_load()
+        require("luasnip.loaders.from_vscode").load({
+            paths = "~/.config/nvim/snippets",
+        })
 
         cmp.setup({
             experimental = {
@@ -255,7 +258,6 @@ return {
                 ['<C-d>'] = cmp.mapping(function()
                     cmp.close_docs()
                 end, { 'i', 's' }),
-
                 ['<C-f>'] = cmp.mapping.scroll_docs(4),
                 ['<C-b>'] = cmp.mapping.scroll_docs(-4),
                 ['<C-j>'] = cmp.mapping(select_next_item),

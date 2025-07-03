@@ -1,6 +1,6 @@
 {
     "$schema": "vscode://schemas/color-theme",
-    "name": "Lackluster Hack",
+    "name": "Mayur dark",
     "type": "dark",
     "colors": {
         "editor.background": "#101010",
@@ -32,9 +32,6 @@
         "list.activeSelectionForeground": "#cccccc",
         "list.hoverBackground": "#191919",
         "scrollbar.shadow": "#2a2a2a",
-        "scrollbarSlider.background": "#555555aa",
-        "scrollbarSlider.hoverBackground": "#555555dd",
-        "scrollbarSlider.activeBackground": "#555555ff"
     },
     "tokenColors": [
         {
@@ -75,7 +72,7 @@
                 "meta.embedded"
             ],
             "settings": {
-                "foreground": "#8a8a8a"
+                "foreground": "#9c9c9c"
             }
         }
     ]

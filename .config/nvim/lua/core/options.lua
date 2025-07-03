@@ -1,7 +1,7 @@
 vim.wo.number = true
 vim.o.relativenumber = true
 vim.o.clipboard = 'unnamedplus'
-vim.o.wrap = false 
+vim.o.wrap = false
 vim.o.linebreak = true
 vim.o.mouse = 'a' -- Enable mouse mode
 vim.o.autoindent = true
@@ -15,7 +15,7 @@ vim.o.expandtab = true
 vim.o.scrolloff = 5
 vim.opt.termguicolors = true
 vim.o.undofile = true -- Save undo history (default: false)
-vim.o.background = "dark"
+-- vim.o.background = "dark"
 vim.opt.showmode = false
 
 
