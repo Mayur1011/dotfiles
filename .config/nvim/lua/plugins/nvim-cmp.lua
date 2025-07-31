@@ -55,6 +55,7 @@ return {
             Unit = ' ',
             Value = ' ',
             Variable = ' ',
+            Supermaven = "",
         }
         -- Returns the current column number.
         local column = function()
@@ -237,7 +238,9 @@ return {
                 { name = "buffer" }, -- text within current buffer
                 { name = "path" }, -- file system paths
                 { name = "tailwindcss-colorizer-cmp" },
+                { name = "supermaven" } -- supermaven
             }),
+
             -- mapping = cmp.mapping.preset.insert({
             --     ["<C-k>"] = cmp.mapping.select_prev_item(), -- previous suggestion
             --     ["<C-j>"] = cmp.mapping.select_next_item(), -- next suggestion

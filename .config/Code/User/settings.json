@@ -49,7 +49,7 @@
     OTHER SETTINGS
 
     */
-    "terminal.integrated.fontFamily": "Iosevka Nerd Font",
+    "terminal.integrated.fontFamily": "GeistMono Nerd Font, Iosevka Nerd Font",
     "terminal.integrated.fontLigatures": true,
     "editor.fontLigatures": true,
     "editor.smoothScrolling": true,
@@ -92,10 +92,9 @@
     "debug.onTaskErrors": "debugAnyway",
     "workbench.sideBar.location": "right",
     // "workbench.activityBar.location": "top",
-    "window.customTitleBarVisibility": "never", // Change this if you want to see the title bar + settings button + account button
+    // "window.customTitleBarVisibility": "never", // Change this if you want to see the title bar + settings button + account button
     "window.density.editorTabHeight": "compact", // Alt for toggle
     "window.menuBarVisibility": "toggle",
-    "window.titleBarStyle": "native",
     "window.restoreWindows": "none",
     "workbench.startupEditor": "none",
     "glassit.alpha": 235,
@@ -123,6 +122,8 @@
     "editor.suggest.insertMode": "replace",
     "editor.bracketPairColorization.enabled": false,
     "editor.fontSize": 22,
-    "editor.fontFamily": "Iosevka Nerd Font, monospace",
+    "editor.fontFamily": "GeistMono Nerd Font, Iosevka Nerd Font, monospace",
     "workbench.colorTheme": "Tsoding Gruber Darker",
+    "editor.inlineSuggest.fontFamily": "GeistMono Nerd Font, Iosevka Nerd Font, default",
+    "workbench.editor.labelFormat": "short",
 }

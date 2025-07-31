@@ -15,9 +15,14 @@ vim.o.expandtab = true
 vim.o.scrolloff = 5
 vim.opt.termguicolors = true
 vim.o.undofile = true -- Save undo history (default: false)
--- vim.o.background = "dark"
+vim.o.background = "dark"
 vim.opt.showmode = false
-
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.opt.foldlevelstart = 99
+vim.opt.foldenable = true
+-- vim.cmd("set guicursor=n-v-c:block-blinkon1,i-ci:ver25")
+-- vim.opt.guicursor = "n-v-c:block-blinkon1-CursorInsert,i:block-CursorInsert"
 
 vim.api.nvim_create_autocmd("TextYankPost", {
     group = vim.api.nvim_create_augroup("YankHighlight", { clear = true }),
@@ -27,3 +32,10 @@ vim.api.nvim_create_autocmd("TextYankPost", {
     end,
     desc = "Highlight yanked text"
 })
+
+
+-- vim.api.nvim_create_autocmd("CursorHold", {
+--     callback = function()
+--         vim.diagnostic.open_float(nil, { focusable = false, source = "if_many" })
+--     end,
+-- })

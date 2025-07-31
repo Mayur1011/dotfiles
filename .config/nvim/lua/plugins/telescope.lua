@@ -81,13 +81,12 @@ return {
         vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = '[S]earch by [G]rep' })
         vim.keymap.set('n', '<leader>fd', builtin.diagnostics, { desc = '[S]earch [D]iagnostics' })
         vim.keymap.set('n', '<leader>fr', builtin.resume, { desc = '[S]earch [R]esume' })
-        vim.keymap.set('n', '<leader>f.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
+        -- vim.keymap.set('n', '<leader>ff.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
         vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
 
-
-        vim.keymap.set('n', '<leader>frf', function()
-            builtin.find_files({ cwd = vim.fn.expand("~") })
-        end, { desc = 'Find files from ~ (home directory)' })
+        -- vim.keymap.set('n', '<leader>frf', function()
+        --     builtin.find_files({ cwd = vim.fn.expand("~") })
+        -- end, { desc = 'Find files from ~ (home directory)' })
 
         -- Slightly advanced example of overriding default behavior and theme
         vim.keymap.set('n', '<leader>/', function()
@@ -106,5 +105,10 @@ return {
                 prompt_title = 'Live Grep in Open Files',
             }
         end, { desc = '[S]earch [/] in Open Files' })
+
+
+        vim.keymap.set("n", "<leader>fcs", function()
+            require("telescope.builtin").colorscheme({ enable_preview = true })
+        end, { desc = "Telescope Colorscheme Picker" })
     end,
 }

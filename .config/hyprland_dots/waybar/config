@@ -13,8 +13,7 @@
         "network",
         "bluetooth",
         "battery",
-        "clock",
-        "custom/power"
+        "clock"
     ],
     "hyprland/window": {
         "format": "{}",
@@ -38,7 +37,7 @@
         "sort-by-number": true
     },
     "tray": {
-        "spacing": 10
+        "spacing": 0
     },
     "clock": {
         "format": "<b>{:%I:%M %p}</b>",
@@ -57,7 +56,7 @@
         "tooltip-format": "{capacity}%"
     },
     "network": {
-        "format-wifi": "",
+        "format-wifi": "󰖩",
         "format-ethernet": "",
         "format-disconnected": "",
         "tooltip-format": "Connected to {essid}",
@@ -109,10 +108,10 @@
       "format": "󰂯",
       "format-disabled": "󰂲", // an empty format will hide the module () 
       "format-connected": "󰂱",
-      "tooltip-format": "{controller_alias}\t{controller_address}",
-      "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+      "tooltip-format-connected": "{device_enumerate}",
       "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
       "on-click": "blueman-manager"
+      // "tooltip-format": "{controller_alias}\t{controller_address}",
     },
     "custom/notification": {
         "tooltip": false,
@@ -156,5 +155,4 @@
         "escape": true
     }
 }
-
 // vim: ft=jsonc

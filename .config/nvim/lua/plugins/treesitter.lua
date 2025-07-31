@@ -18,6 +18,7 @@ return {
                     "json",
                     "javascript",
                     "typescript",
+                    "svelte",
                     "tsx",
                     "php",
                     "html",
