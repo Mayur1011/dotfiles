@@ -10,7 +10,7 @@ yellow = "#f0c674"
 
 [directory]
 style = "fg:#fdfefe"
-format = "[ $path ]($style)"
+format = "[$path ]($style)"
 truncation_length = 1
 
 [git_branch]

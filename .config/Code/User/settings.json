@@ -75,7 +75,7 @@
         "java": true
     },
     "editor.tokenColorCustomizations": {
-        "comments": "#ffffff34",
+        "comments": "#ffffff6a",
         "textMateRules": [
             {
                 "scope": [
@@ -126,4 +126,5 @@
     "workbench.colorTheme": "Tsoding Gruber Darker",
     "editor.inlineSuggest.fontFamily": "GeistMono Nerd Font, Iosevka Nerd Font, default",
     "workbench.editor.labelFormat": "short",
+    "editor.wordWrap": "on",
 }
