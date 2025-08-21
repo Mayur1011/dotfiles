@@ -5,32 +5,32 @@
 -- end
 
 
-return {
-    "blazkowolf/gruber-darker.nvim",
-    priority = 1000,
-    opts = {
-        -- bold = false,
-        -- italic = {
-        --     strings = false,
-        -- },
-        editor = {
-            transparent_background = true
-        }
-    },
-    config = function()
-        require('gruber-darker').setup({
-            style = 'darker',
-            telescope = true,          -- Telescope plugin
-            telescope_borders = false, -- Telescope borders
-        })
-        require('gruber-darker').load()
-        vim.api.nvim_set_hl(0, "Normal", { bg = "none"})
-        vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
-        vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
-        vim.api.nvim_set_hl(0, "VertSplit", { bg = "none" })
-        vim.api.nvim_set_hl(0, "StatusLine", { bg = "none" })
-    end
-}
+-- return {
+--     "blazkowolf/gruber-darker.nvim",
+--     priority = 1000,
+--     opts = {
+--         -- bold = false,
+--         -- italic = {
+--         --     strings = false,
+--         -- },
+--         editor = {
+--             transparent_background = true
+--         }
+--     },
+--     config = function()
+--         require('gruber-darker').setup({
+--             style = 'darker',
+--             telescope = true,          -- Telescope plugin
+--             telescope_borders = false, -- Telescope borders
+--         })
+--         require('gruber-darker').load()
+--         vim.api.nvim_set_hl(0, "Normal", { bg = "none"})
+--         vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
+--         vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
+--         vim.api.nvim_set_hl(0, "VertSplit", { bg = "none" })
+--         vim.api.nvim_set_hl(0, "StatusLine", { bg = "none" })
+--     end
+-- }
 
 -- return {
 --     'Mofiqul/vscode.nvim',
@@ -191,26 +191,26 @@ return {
 --     end
 -- }
 
--- return {
---     "gmr458/cold.nvim",
---     lazy = false,
---     priority = 1000,
---     config = function()
---         require("cold").setup({
---             disable_background = true, -- disables background color (for transparency)
---             disable_float_background = true, -- makes floating windows transparent too
---         })
---         vim.cmd("colorscheme cold")
---
---         -- Optional: clear background for Normal and Float explicitly
---         vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
---         vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
---         vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
---         vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
---         vim.api.nvim_set_hl(0, "VertSplit", { bg = "none" })
---         vim.api.nvim_set_hl(0, "StatusLine", { bg = "none" })
---     end
--- }
+return {
+    "gmr458/cold.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+        require("cold").setup({
+            disable_background = true, -- disables background color (for transparency)
+            disable_float_background = true, -- makes floating windows transparent too
+        })
+        vim.cmd("colorscheme cold")
+
+        -- Optional: clear background for Normal and Float explicitly
+        vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+        vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+        vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
+        vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
+        vim.api.nvim_set_hl(0, "VertSplit", { bg = "none" })
+        vim.api.nvim_set_hl(0, "StatusLine", { bg = "none" })
+    end
+}
 
 -- return {
 --     "webhooked/kanso.nvim",

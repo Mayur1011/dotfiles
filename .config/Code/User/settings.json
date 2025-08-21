@@ -127,4 +127,5 @@
     "editor.inlineSuggest.fontFamily": "GeistMono Nerd Font, Iosevka Nerd Font, default",
     "workbench.editor.labelFormat": "short",
     "editor.wordWrap": "on",
+    "github.copilot.nextEditSuggestions.enabled": true,
 }

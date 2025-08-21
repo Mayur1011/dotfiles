@@ -27,5 +27,6 @@ require("lazy").setup({
 	require("plugins.colorizer"),
 	require("plugins.flash"),
     require("plugins.nvim-surround"),
-    require("plugins.supermaven")
+    require("plugins.copilot"),
+    require("plugins.copilotchat")
 })

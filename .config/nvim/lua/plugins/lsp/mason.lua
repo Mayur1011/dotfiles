@@ -40,7 +40,7 @@ return {
 				"html",
 				"cssls",
 				"tailwindcss",
-				-- "gopls",
+				"gopls",
 				"emmet_ls",
 				"emmet_language_server",
 				-- "eslint",

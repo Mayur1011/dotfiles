@@ -56,12 +56,14 @@ return {
             Value = ' ',
             Variable = ' ',
             Supermaven = "",
+            Copilot = " ",
         }
         -- Returns the current column number.
         local column = function()
             local _line, col = unpack(vim.api.nvim_win_get_cursor(0))
             return col
         end
+
 
 
         -- luasnip custom function
@@ -238,7 +240,10 @@ return {
                 { name = "buffer" }, -- text within current buffer
                 { name = "path" }, -- file system paths
                 { name = "tailwindcss-colorizer-cmp" },
-                { name = "supermaven" } -- supermaven
+                { name = "copilot" },
+
+                -- { name = "supermaven" } -- supermaven
+
             }),
 
             -- mapping = cmp.mapping.preset.insert({
