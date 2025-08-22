@@ -9,20 +9,29 @@ map("i", "<C-h>", "<Left>",  { noremap = true, silent = true, desc = "move left"
 map("i", "<C-l>", "<Right>", {noremap = true, silent = true,  desc = "move right" })
 map("i", "<C-j>", "<Down>",  { noremap = true, silent = true, desc = "move down" })
 map("i", "<C-k>", "<Up>", { noremap = true, silent = true, desc = "move up" })
+
 map({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true, desc = "Disable spacebar keys default behaviour in normal and visual mode" })
+
 map('n', 'x', '"_x', { noremap = true, silent = true, desc = "delete single character without copying into register" })
+
 map('n', '<C-d>', '<C-d>zz', { noremap = true, silent = true, desc = "Vertical scroll down" })
 map('n', '<C-u>', '<C-u>zz', { noremap = true, silent = true, desc = "Vertical scroll up" })
+
 map('n', 'n', 'nzzzv', { noremap = true, silent = true, desc = "Move to next occurence of the searched text" })
 map('n', 'N', 'Nzzzv',{ noremap = true, silent = true, desc = "Move to previous occurence of the searched text" })
+
 map('n', '<Up>', ':resize -2<CR>', { noremap = true, silent = true, desc = "Move the split up"})
 map('n', '<Down>', ':resize +2<CR>', { noremap = true, silent = true, desc = "Move the split down"})
 map('n', '<Left>', ':vertical resize -2<CR>', { noremap = true, silent = true, desc = "Move the split left"})
 map('n', '<Right>', ':vertical resize +2<CR>', { noremap = true, silent = true, desc = "Move the split right"})
+
+-- Buffer
 map('n', '<Tab>', ':bnext<CR>', { noremap = true, silent = true, desc = "Move to next buffer"})
 map('n', '<S-Tab>', ':bprevious<CR>', { noremap = true, silent = true, desc = "Move the previous buffer"})
 map('n', '<leader>x', ':bdelete!<CR>', {noremap = true, silent = true, desc = "Close the current buffer"})
 map('n', '<leader>b', '<cmd> enew <CR>', {noremap = true, silent = true, desc = "Create new buffer"})
+
+-- Splits
 map('n', '<leader>v', '<C-w>v', { noremap = true, silent = true, desc = "Split window vertically"})
 map('n', '<leader>h', '<C-w>s', { noremap = true, silent = true, desc = "Split window horizontally"})
 map('n', '<leader>se', '<C-w>=', { noremap = true, silent = true, desc = "Make split windows equal"})
@@ -31,16 +40,24 @@ map('n', '<C-k>', ':wincmd k<CR>', { noremap = true, silent = true, desc = "Move
 map('n', '<C-j>', ':wincmd j<CR>', { noremap = true, silent = true, desc = "Move to bottom split"})
 map('n', '<C-h>', ':wincmd h<CR>', { noremap = true, silent = true, desc = "Move to left split"})
 map('n', '<C-l>', ':wincmd l<CR>', { noremap = true, silent = true, desc = "Move to right split"})
+
+-- Tabs
 map('n', '<leader>to', ':tabnew<CR>', { noremap = true, silent = true, desc = "Open new tab"})
 map('n', '<leader>tx', ':tabclose<CR>', { noremap = true, silent = true, desc = "close current tab"})
 map('n', '<leader>tn', ':tabn<CR>', { noremap = true, silent = true, desc = "Go to next tab"})
 map('n', '<leader>tp', ':tabp<CR>', { noremap = true, silent = true, desc = "Go to previous tab"})
+
 map('n', '<leader>lw', '<cmd>set wrap!<CR>', { noremap = true, silent = true, desc = "Toggle line wrapping"})
+
 map('v', '<', '<gv', { noremap = true, desc = "Stay in indent mode", silent = true })
 map('v', '>', '>gv', { noremap = true, desc = "Stay in indent mode", silent = true })
+
 map('v', 'p', '"_dP', { noremap = true, silent = true, desc = "Keep last yanked when pasting" })
+
 map("n", "<Esc>", "<cmd>noh<CR>", { noremap = true, silent = true, desc = "general clear highlights" })
+
 map("i", 'jk', '<ESC>', { noremap = true, silent = true, desc = "Move from Insert to Normal mode" })
+
 map("v", "<C-A-k>", ":m '<-2<CR>gv=gv", { noremap = true, desc = "Move line up", silent = true })
 map("v", "<C-A-j>", ":m '>+1<CR>gv=gv", { noremap = true, desc = "Move line down", silent = true })
 -- map("n", "<A-j>", ":m .+1<CR>==", { silent = true })
