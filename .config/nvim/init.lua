@@ -29,5 +29,6 @@ require("lazy").setup({
     require("plugins.nvim-surround"),
     require("plugins.copilot"),
     require("plugins.copilotchat"),
-    require("plugins.tiny-inline-diagnostic")
+    require("plugins.tiny-inline-diagnostic"),
+    require("plugins.snipe")
 })

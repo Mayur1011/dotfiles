@@ -128,4 +128,7 @@
     "workbench.editor.labelFormat": "short",
     "editor.wordWrap": "on",
     "github.copilot.nextEditSuggestions.enabled": true,
+    "terminal.integrated.fontLigatures.enabled": true,
+    "editor.cursorStyle": "block",
+    "explorer.confirmDelete": false,
 }

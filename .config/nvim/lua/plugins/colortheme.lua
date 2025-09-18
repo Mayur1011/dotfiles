@@ -15,8 +15,7 @@
 --         -- },
 --         editor = {
 --             transparent_background = true
---         }
---     },
+--         } },
 --     config = function()
 --         require('gruber-darker').setup({
 --             style = 'darker',
@@ -76,31 +75,32 @@
 --     end
 -- }
 
--- return {
---     "metalelf0/black-metal-theme-neovim",
---     lazy = false,
---     priority = 1000,
---     config = function()
---         require("black-metal").setup({
---             -- optional configuration here
---             theme = "emperor",
---             disable_background = true, -- disables background color (for transparency)
---             disable_float_background = true, -- makes floating windows transparent too
---         })
---         -- require("black-metal").load()
---
---         vim.cmd.colorscheme("emperor")
---
---         -- Optional: clear background for Normal and Float explicitly
---         vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
---         vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
---         vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
---         vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
---         vim.api.nvim_set_hl(0, "VertSplit", { bg = "none" })
---         vim.api.nvim_set_hl(0, "StatusLine", { bg = "none" })
---
---     end,
--- }
+return {
+    "metalelf0/black-metal-theme-neovim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+        require("black-metal").setup({
+            -- optional configuration here
+            theme = "emperor",
+            disable_background = true, -- disables background color (for transparency)
+            disable_float_background = true, -- makes floating windows transparent too
+        })
+        -- require("black-metal").load()
+
+        -- vim.cmd.colorscheme("emperor")
+        vim.cmd.colorscheme("gorgoroth")
+
+        -- Optional: clear background for Normal and Float explicitly
+        vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+        vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+        vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
+        vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
+        vim.api.nvim_set_hl(0, "VertSplit", { bg = "none" })
+        vim.api.nvim_set_hl(0, "StatusLine", { bg = "none" })
+
+    end,
+}
 
 -- return {
 --     "mellow-theme/mellow.nvim",
@@ -110,15 +110,9 @@
 -- }
 
 -- return {
---     "vague2k/vague.nvim",
+--     'kvrohit/substrata.nvim',
 --     config = function()
---         require("vague").setup({
---             disable_background = true, -- disables background color (for transparency)
---             disable_float_background = true, -- makes floating windows transparent too
---         })
---
---         vim.cmd("colorscheme vague")
---
+--         vim.cmd.colorscheme('substrata')
 --         -- Optional: clear background for Normal and Float explicitly
 --         vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 --         vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
@@ -169,48 +163,26 @@
 --     end
 -- }
 
-
 -- return {
---     "p00f/alabaster.nvim",
+--     "gmr458/cold.nvim",
 --     lazy = false,
 --     priority = 1000,
 --     config = function()
---         -- require("alabaster").setup({
---         --     disable_background = true, -- disables background color (for transparency)
---         --     disable_float_background = true, -- makes floating windows transparent too
---         -- })
---         vim.cmd("colorscheme alabaster")
+--         require("cold").setup({
+--             disable_background = true, -- disables background color (for transparency)
+--             disable_float_background = true, -- makes floating windows transparent too
+--         })
+--         vim.cmd("colorscheme cold")
 --
 --         -- Optional: clear background for Normal and Float explicitly
---         -- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
---         -- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
---         -- vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
---         -- vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
---         -- vim.api.nvim_set_hl(0, "VertSplit", { bg = "none" })
---         -- vim.api.nvim_set_hl(0, "StatusLine", { bg = "none" })
+--         vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+--         vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+--         vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
+--         vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
+--         vim.api.nvim_set_hl(0, "VertSplit", { bg = "none" })
+--         vim.api.nvim_set_hl(0, "StatusLine", { bg = "none" })
 --     end
 -- }
-
-return {
-    "gmr458/cold.nvim",
-    lazy = false,
-    priority = 1000,
-    config = function()
-        require("cold").setup({
-            disable_background = true, -- disables background color (for transparency)
-            disable_float_background = true, -- makes floating windows transparent too
-        })
-        vim.cmd("colorscheme cold")
-
-        -- Optional: clear background for Normal and Float explicitly
-        vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-        vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-        vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
-        vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
-        vim.api.nvim_set_hl(0, "VertSplit", { bg = "none" })
-        vim.api.nvim_set_hl(0, "StatusLine", { bg = "none" })
-    end
-}
 
 -- return {
 --     "webhooked/kanso.nvim",
@@ -256,3 +228,31 @@ return {
 --         vim.api.nvim_set_hl(0, "StatusLine", { bg = "none" })
 --     end
 -- }
+
+-- return {
+--     "zenbones-theme/zenbones.nvim",
+--     -- Optionally install Lush. Allows for more configuration or extending the colorscheme
+--     -- If you don't want to install lush, make sure to set g:zenbones_compat = 1
+--     -- In Vim, compat mode is turned on as Lush only works in Neovim.
+--     dependencies = "rktjmp/lush.nvim",
+--     lazy = false,
+--     priority = 1000,
+--     -- you can set set configuration options here
+--     config = function()
+--         -- require("zenbones").setup({
+--         --     disable_background = true, -- disables background color (for transparency)
+--         --     disable_float_background = true, -- makes floating windows transparent too
+--         -- })
+--         vim.g.zenbones_darken_comments = 45
+--         vim.cmd.colorscheme('neobones')
+--         -- vim.cmd.colorscheme('zenwritten')
+--         -- Optional: clear background for Normal and Float explicitly
+--         vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+--         vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+--         vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
+--         vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
+--         vim.api.nvim_set_hl(0, "VertSplit", { bg = "none" })
+--         vim.api.nvim_set_hl(0, "StatusLine", { bg = "none" })
+--     end
+-- }
+
