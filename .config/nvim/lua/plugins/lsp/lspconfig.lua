@@ -101,12 +101,17 @@ return {
 
         -- Config lsp servers here
         --
-        lspconfig.clangd.setup({
+        -- vim.lsp.config.clangd.setup({
+        --     capabilities = capabilities,
+        -- })
+        vim.lsp.config('clangd', {
             capabilities = capabilities,
         })
+        vim.lsp.enable('clangd')
+
 
         -- lua_ls
-        lspconfig.lua_ls.setup({
+        vim.lsp.config('lua_ls', {
             capabilities = capabilities,
             settings = {
                 Lua = {
@@ -125,8 +130,9 @@ return {
                 },
             },
         })
+        vim.lsp.enable('lua_ls')
         -- emmet_ls
-        lspconfig.emmet_ls.setup({
+        vim.lsp.config('emmet_ls', {
             capabilities = capabilities,
             filetypes = {
                 "html",
@@ -139,9 +145,10 @@ return {
                 "svelte",
             },
         })
+        vim.lsp.enable('emmet_ls')
 
         -- emmet_language_server
-        lspconfig.emmet_language_server.setup({
+        vim.lsp.config('emmet_language_server', {
             capabilities = capabilities,
             filetypes = {
                 "css",
@@ -167,6 +174,7 @@ return {
                 variables = {},
             },
         })
+        vim.lsp.enable('emmet_language_server')
 
         -- denols
         -- lspconfig.denols.setup({
@@ -175,7 +183,7 @@ return {
         -- })
 
         -- ts_ls (replaces tsserver)
-        lspconfig.ts_ls.setup({
+        vim.lsp.config('ts_ls', {
             capabilities = capabilities,
             root_dir = function(fname)
                 local util = lspconfig.util
@@ -190,8 +198,7 @@ return {
                 },
             },
         })
-
-
+        vim.lsp.enable('ts_ls')
 
 
         -- HACK: If using Blink.cmp Configure all LSPs here
@@ -243,7 +250,9 @@ return {
         -- })
 
         -- Add other LSP servers as needed, e.g., gopls, eslint, html, etc.
-        lspconfig.gopls.setup({ capabilities = capabilities })
+        vim.lsp.config('gopls', { capabilities = capabilities })
+        vim.lsp.enable('gopls')
+
         -- lspconfig.html.setup({ capabilities = capabilities })
         -- lspconfig.cssls.setup({ capabilities = capabilities })
     end,

@@ -23,7 +23,11 @@ vim.opt.showmode = false
 vim.opt.foldenable = true
 -- vim.cmd("set guicursor=n-v-c:block-blinkon1,i-ci:ver25")
 -- vim.opt.guicursor = "n-v-c:block-blinkon1-CursorInsert,i:block-CursorInsert"
-
+-- vim.opt.guicursor = {
+--   "i-ci:hor20",
+--   -- "n-v-c:hor20",
+--   -- "r-cr:hor20"
+-- }
 vim.api.nvim_create_autocmd("TextYankPost", {
     group = vim.api.nvim_create_augroup("YankHighlight", { clear = true }),
     pattern = "*",

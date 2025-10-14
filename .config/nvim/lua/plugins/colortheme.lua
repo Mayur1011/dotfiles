@@ -50,46 +50,19 @@
 --     end
 -- }
 
--- return {
---     "slugbyte/lackluster.nvim",
---     lazy = false,
---     priority = 1000,
---     init = function()
---         require("lackluster").setup({
---             disable_background = true, -- disables background color (for transparency)
---             disable_float_background = true, -- makes floating windows transparent too
---         })
---
---         -- vim.cmd.colorscheme("lackluster")
---         vim.cmd.colorscheme("lackluster-hack") -- my favorite
---         -- vim.cmd.colorscheme("lackluster-mint")
---
---         -- Optional: clear background for Normal and Float explicitly
---         vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
---         vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
---         vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
---         vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
---         vim.api.nvim_set_hl(0, "VertSplit", { bg = "none" })
---         vim.api.nvim_set_hl(0, "StatusLine", { bg = "none" })
---
---     end
--- }
-
 return {
-    "metalelf0/black-metal-theme-neovim",
+    "slugbyte/lackluster.nvim",
     lazy = false,
     priority = 1000,
-    config = function()
-        require("black-metal").setup({
-            -- optional configuration here
-            theme = "emperor",
+    init = function()
+        require("lackluster").setup({
             disable_background = true, -- disables background color (for transparency)
             disable_float_background = true, -- makes floating windows transparent too
         })
-        -- require("black-metal").load()
 
-        -- vim.cmd.colorscheme("emperor")
-        vim.cmd.colorscheme("gorgoroth")
+        -- vim.cmd.colorscheme("lackluster")
+        vim.cmd.colorscheme("lackluster-hack") -- my favorite
+        -- vim.cmd.colorscheme("lackluster-mint")
 
         -- Optional: clear background for Normal and Float explicitly
         vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
@@ -99,8 +72,35 @@ return {
         vim.api.nvim_set_hl(0, "VertSplit", { bg = "none" })
         vim.api.nvim_set_hl(0, "StatusLine", { bg = "none" })
 
-    end,
+    end
 }
+
+-- return {
+--     "metalelf0/black-metal-theme-neovim",
+--     lazy = false,
+--     priority = 1000,
+--     config = function()
+--         require("black-metal").setup({
+--             -- optional configuration here
+--             theme = "emperor",
+--             disable_background = true, -- disables background color (for transparency)
+--             disable_float_background = true, -- makes floating windows transparent too
+--         })
+--         -- require("black-metal").load()
+--
+--         -- vim.cmd.colorscheme("emperor")
+--         vim.cmd.colorscheme("gorgoroth")
+--
+--         -- Optional: clear background for Normal and Float explicitly
+--         vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+--         vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+--         vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
+--         vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
+--         vim.api.nvim_set_hl(0, "VertSplit", { bg = "none" })
+--         vim.api.nvim_set_hl(0, "StatusLine", { bg = "none" })
+--
+--     end,
+-- }
 
 -- return {
 --     "mellow-theme/mellow.nvim",
@@ -109,19 +109,6 @@ return {
 --     end
 -- }
 
--- return {
---     'kvrohit/substrata.nvim',
---     config = function()
---         vim.cmd.colorscheme('substrata')
---         -- Optional: clear background for Normal and Float explicitly
---         vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
---         vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
---         vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
---         vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
---         vim.api.nvim_set_hl(0, "VertSplit", { bg = "none" })
---         vim.api.nvim_set_hl(0, "StatusLine", { bg = "none" })
---     end
--- }
 
 -- return {
 --     "rose-pine/neovim",

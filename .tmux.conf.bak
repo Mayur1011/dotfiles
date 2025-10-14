@@ -1,0 +1,25 @@
+bind-key "\\" split-window -fh -c "#{pane_current_path}" # Horizontal split
+bind-key "-" split-window -fv -c "#{pane_current_path}" # Vertical split
+bind -r "<" swap-window -d -t -1 # Move the window one position to the left
+bind -r ">" swap-window -d -t +1 # Move the window one position to the right
+bind Space last-window # Move to the last opened window
+bind-key h select-pane -L
+bind-key j select-pane -D
+bind-key k select-pane -U
+bind-key l select-pane -R
+
+setw -g mode-keys vi
+
+# Setting leader the Ctrl+Space
+unbind C-a
+set -g prefix C-a
+bind C-a send-prefix
+
+# Binding leader + r to relead the config
+unbind r
+bind r source-file ~/.tmux.conf \; display "Reloaded"
+
+set-option -g history-limit 5002
+set -g base-index 1 # Start window naming from 1
+set -g renumber-windows on # Renumber window if I closed a window in between
+setw -g pane-base-index 1
