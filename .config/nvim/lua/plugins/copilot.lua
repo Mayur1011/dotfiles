@@ -21,13 +21,13 @@ return {
     event = "InsertEnter",
     config = function()
         require("copilot").setup({
-          suggestion = {
-            auto_trigger = true,
-            debounce = 100,
-            keymap = {
-              accept = "<C-l>",
-            },
-          }
+            suggestion = {
+                auto_trigger = true,
+                debounce = 100,
+                keymap = {
+                    accept = "<C-l>",
+                },
+            }
         })
     end
 }
