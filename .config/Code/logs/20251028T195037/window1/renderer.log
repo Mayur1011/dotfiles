@@ -1,0 +1,7 @@
+2025-10-28 19:50:38.749 [error] Conflict in settings file vscode-userdata:/home/mayur/.config/Code/User/settings.json: Ignoring terminal.integrated.fontLigatures.enabled as terminal.integrated.fontLigatures is true
+2025-10-28 19:50:39.240 [info] ChatSessionStore: Migrating 0 chat sessions from storage service to file system
+2025-10-28 19:50:39.409 [info] Started local extension host with pid 12916.
+2025-10-28 19:50:39.468 [info] Started initializing default profile extensions in extensions installation folder. file:///home/mayur/.vscode/extensions
+2025-10-28 19:50:39.691 [info] Completed initializing default profile extensions in extensions installation folder. file:///home/mayur/.vscode/extensions
+2025-10-28 19:50:40.483 [info] MCP Registry configured: https://api.mcp.github.com/2025-09-15
+2025-10-28 19:50:40.563 [info] Settings Sync: Account status changed from uninitialized to unavailable

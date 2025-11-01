@@ -1,0 +1,19 @@
+# Server Configuration
+SERVER_PORT=8080
+
+# Cache Configuration
+CACHE_SIZE=1024
+
+# Database Configuration
+# DB_USER=postgres
+# DB_PASSWORD=postgrespass
+# DB_DB=kvstore
+# DB_HOST=localhost
+# DB_PORT=5431
+
+MYSQL_ROOT_PASSWORD=rootpass
+DB_USER=kvuser
+DB_PASSWORD=mysqlpass
+DB_DB=kvstore
+DB_HOST=127.0.0.1
+DB_PORT=3307

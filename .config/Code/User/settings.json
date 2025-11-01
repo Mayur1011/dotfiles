@@ -131,4 +131,5 @@
     "terminal.integrated.fontLigatures.enabled": true,
     "editor.cursorStyle": "block",
     "explorer.confirmDelete": false,
+    "window.customTitleBarVisibility": "windowed",
 }

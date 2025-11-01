@@ -1,0 +1,4 @@
+2025-10-28 19:50:37.773 [error] Conflict in settings file vscode-userdata:/home/mayur/.config/Code/User/settings.json: Ignoring terminal.integrated.fontLigatures.enabled as terminal.integrated.fontLigatures is true
+2025-10-28 19:50:37.835 [info] update#setState idle
+2025-10-28 19:50:41.307 [info] Extension host with pid 12916 exited with code: 0, signal: unknown.
+2025-10-28 19:50:41.346 [error] [UtilityProcess id: 1, type: fileWatcher, pid: 12887]: crashed with code 15 and reason 'killed'
