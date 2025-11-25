@@ -21,6 +21,7 @@ vim.opt.showmode = false
 -- vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 -- vim.opt.foldlevelstart = 99
 vim.opt.foldenable = true
+vim.opt.guicursor = ""
 -- vim.cmd("set guicursor=n-v-c:block-blinkon1,i-ci:ver25")
 -- vim.opt.guicursor = "n-v-c:block-blinkon1-CursorInsert,i:block-CursorInsert"
 -- vim.opt.guicursor = {
