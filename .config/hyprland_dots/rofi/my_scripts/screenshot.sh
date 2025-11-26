@@ -8,7 +8,6 @@ set -x  # Enable debugging
 source "$HOME"/.config/rofi/applets/shared/theme.bash
 theme="$type/$style"
 
-
 # type="$HOME/.config/rofi/applets/type-1"
 # style='style-1.rasi'
 
