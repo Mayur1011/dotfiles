@@ -1,0 +1,15 @@
+/* Rofi + Pywal dynamic theme */
+
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+/* or use colors-rofi-light.rasi if your Pywal theme is light */
+
+/* You can also override specific colors here if you like */
+* {
+    background: #090404;
+    background-alt: #090404;
+    foreground: #c1c0c0;
+    selected: #7d7792;
+    active: #8262f1;
+    urgent: #8d7196;
+}
+

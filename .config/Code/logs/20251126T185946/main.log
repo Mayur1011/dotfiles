@@ -1,0 +1,2 @@
+2025-11-26 18:59:46.431 [error] Conflict in settings file vscode-userdata:/home/mayur/.config/Code/User/settings.json: Ignoring terminal.integrated.fontLigatures.enabled as terminal.integrated.fontLigatures is true
+2025-11-26 18:59:46.503 [info] update#setState idle

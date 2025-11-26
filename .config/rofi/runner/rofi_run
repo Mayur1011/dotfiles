@@ -1,0 +1,15 @@
+#!/bin/sh
+export PATH="$HOME/.config/rofi/my_scripts:$PATH"
+
+if pgrep -x rofi; then
+    pkill -x rofi
+else
+    dir="$HOME/.config/rofi/runner"
+    theme='style'
+
+    rofi \
+        -show drun \
+        -theme ${dir}/${theme}.rasi
+    # ~/.config/rofi/scripts/launcher_t4
+    # rofi -normal-window -show drun
+fi

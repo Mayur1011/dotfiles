@@ -4,14 +4,10 @@
     "telemetry.devDeviceId": "68b5c26c-3864-48cc-b782-9e7d067081a2",
     "backupWorkspaces": {
         "workspaces": [],
-        "folders": [
-            {
-                "folderUri": "file:///home/mayur/Downloads"
-            }
-        ],
+        "folders": [],
         "emptyWindows": [
             {
-                "backupFolder": "1761875716936"
+                "backupFolder": "1764163787419"
             }
         ]
     },
@@ -21,7 +17,9 @@
             "file:///home/mayur/Documents/IITB/DECS/project/kv_load_tester": "__default__profile__",
             "file:///home/mayur/Downloads": "__default__profile__"
         },
-        "emptyWindows": {}
+        "emptyWindows": {
+            "1764163787419": "__default__profile__"
+        }
     },
     "theme": "vs-dark",
     "themeBackground": "#000000",
@@ -59,7 +57,7 @@
             "backupPath": "/home/mayur/.config/Code/Backups/1bcfa9ed049752d21198e969ffc529d6",
             "uiState": {
                 "mode": 0,
-                "x": 0,
+                "x": 1920,
                 "y": 0,
                 "width": 1920,
                 "height": 1080

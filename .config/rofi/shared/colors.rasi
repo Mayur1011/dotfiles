@@ -1,0 +1,6 @@
+// @import "../colors/pywal.rasi"
+// @import "~/.config/rofi/colors/pywal"
+
+// @import "~/.config/rofi/colors/pywal.rasi"
+@import "~/.config/rofi/colors/colors.rasi"
+

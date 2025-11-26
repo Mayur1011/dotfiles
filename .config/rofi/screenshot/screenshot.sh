@@ -5,49 +5,34 @@
 set -x  # Enable debugging
 
 # Import Current Theme
-source "$HOME"/.config/rofi/applets/shared/theme.bash
+
+type="$HOME/.config/rofi/screenshot"
+style='style.rasi'
+
+# source "$HOME"/.config/rofi/applets/shared/theme.bash
 theme="$type/$style"
-
-
-# type="$HOME/.config/rofi/applets/type-1"
-# style='style-1.rasi'
-
-# Theme Elements
 prompt='Screenshot'
-mesg="DIR: $(xdg-user-dir PICTURES)/Screenshots"
+mesg="IMG DIR: $(xdg-user-dir PICTURES)/Screenshots"
+list_col='1'
+list_row='5'
+win_width='400px'
 
-if [[ "$theme" == *'type-1'* ]]; then
-	list_col='1'
-	list_row='5'
-	win_width='400px'
-elif [[ "$theme" == *'type-3'* ]]; then
-	list_col='1'
-	list_row='5'
-	win_width='120px'
-elif [[ "$theme" == *'type-5'* ]]; then
-	list_col='1'
-	list_row='5'
-	win_width='520px'
-elif [[ "$theme" == *'type-2'* || "$theme" == *'type-4'* ]]; then
-	list_col='5'
-	list_row='1'
-	win_width='670px'
-fi
+echo "------------------------------------------------------------------------"
 
 # Options
 layout=$(grep 'USE_ICON' ${theme} | cut -d'=' -f2)
 if [[ "$layout" == 'NO' ]]; then
-	option_1=" Capture Desktop"
-	option_2=" Capture Area"
-	option_3=" Capture Window"
-	option_4=" Capture in 5s"
-	option_5=" Capture in 10s"
+	option_1="Capture Desktop"
+	option_2="Capture Area"
+	option_3="Capture Window"
+	option_4="Capture in 5s"
+	option_5="Capture in 10s"
 else
-	option_1=""
-	option_2=""
-	option_3=""
-	option_4=""
-	option_5=""
+	option_1=""
+	option_2=""
+	option_3=""
+	option_4=""
+	option_5=""
 fi
 
 # Rofi CMD
