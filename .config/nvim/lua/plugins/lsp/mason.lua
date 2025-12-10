@@ -46,6 +46,8 @@ return {
 				-- "eslint",
 				"marksman",
 				"clangd",
+        "pyright",
+        "ruff",
 			},
 		})
 
@@ -53,9 +55,11 @@ return {
 			ensure_installed = {
 				"prettier", -- prettier formatter
 				"stylua", -- lua formatter
-				"isort", -- python formatter
 				"pylint",
+        "black", -- python formatter
+        "ruff", -- python linter
 				"clang-format",
+				-- "isort", -- python formatter
 				-- "denols",
 				-- { 'eslint_d', version = '13.1.2' },
 			},
