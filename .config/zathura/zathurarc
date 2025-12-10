@@ -1,0 +1,4 @@
+set window-title-basename "true"
+set selection-clipboard "clipboard"
+set font "GeistMono Nerd Font 11"
+
