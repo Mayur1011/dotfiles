@@ -2,33 +2,28 @@
 import = [
     # "~/.config/alacritty/themes/themes/aura.toml"
     # "~/.cache/wal/colors-alacritty.toml",
-    # "colors.toml"
+    "colors.toml"
 ]
-# import = ["colors.toml"]
+
 [font]
-# normal = {family = "GeistMono Nerd Font", style = "Regular" }
-# bold = { family = "GeistMono Nerd Font", style = "Bold" }
-# italic = { family = "GeistMono Nerd Font", style = "Italic" }
-# bold_italic = { family = "GeistMono Nerd Font", style = "Bold Italic" }
+normal = {family = "GeistMono Nerd Font", style = "Regular" }
+bold = { family = "GeistMono Nerd Font", style = "Bold" }
+italic = { family = "GeistMono Nerd Font", style = "Italic" }
+bold_italic = { family = "GeistMono Nerd Font", style = "Bold Italic" }
 size = 13  # Adjust size as needed
 
 [window]
 padding = { x = 10, y = 10 }  # Adjust padding as needed
-opacity = 1.0
+opacity = 1
 decorations = "full"
-
-[colors]
-draw_bold_text_with_bright_colors = true
 
 [colors.primary]
 background = "#000000"
 foreground = "#FFFFFF"
 
-[cursor]
-unfocused_hollow = true
-
-[cursor.style]
-shape = "Block"
+[colors]
+draw_bold_text_with_bright_colors = true
+transparent_background_colors = false
 
 [selection]
 save_to_clipboard = true
