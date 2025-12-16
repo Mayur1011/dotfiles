@@ -1,35 +1,73 @@
 add_newline = false
-format = "$character$directory$git_branch$git_status$custom "
+format = """[$custom](dimmed white) $username:$directory $git_branch$git_status| """
 
-palette = 'nord'
+[custom.time]
+command = 'date +"[%H:%M]"'
+when = "true"
+format = "[$output]($style)"
+style = "dimmed white"
 
-[palettes.nord]
-red = "#cc6666"
-green = "#8abeb7"
-yellow = "#f0c674"
+[username]
+show_always = true
+format = "[$user]($style)"
+style_user = "#b8c2bb"
 
 [directory]
-style = "fg:#fdfefe"
-format = "[$path ]($style)"
+format = "[$path]($style)"
+style = "yellow bold"
 truncation_length = 1
+truncate_to_repo = false
+
+# [git_branch]
+# format = " [(]($style)[$branch]($style)[ %)]($style)"
+# style = "yellow bold"
+#
+# [git_status]
+# disabled = true
 
 [git_branch]
-# format = 'git:\([$branch\)]($style)'
-format = '[git:\(](fg:#45b39d)[$branch](fg:purple)[\)](fg:#45b39d)'
-style = "purple"
+format = '[\($branch\)]($style)'
+style = "#8abeb7"
+
 
 [git_status]
 format = "[$all_status]($style) "
-style = "red"
+style = "#8abeb7"
 
-[character]
-success_symbol = "[](fg:green)"
-error_symbol = "[](fg:red)"
 
-[custom.cross_mark]
-command = "echo  "
-when = "true"
-style = "fg:#d4ac0d"
+#------------------------PROMPT 1-----------------------------#
+# add_newline = false
+# format = "$character$directory$git_branch$git_status$custom "
+#
+# palette = 'nord'
+#
+# [palettes.nord]
+# red = "#cc6666"
+# green = "#8abeb7"
+# yellow = "#f0c674"
+#
+# [directory]
+# style = "fg:#fdfefe"
+# format = "[$path ]($style)"
+# truncation_length = 1
+#
+# [git_branch]
+# # format = 'git:\([$branch\)]($style)'
+# format = '[git:\(](fg:#45b39d)[$branch](fg:purple)[\)](fg:#45b39d)'
+# style = "purple"
+#
+# [git_status]
+# format = "[$all_status]($style) "
+# style = "red"
+#
+# [character]
+# success_symbol = "[](fg:green)"
+# error_symbol = "[](fg:red)"
+#
+# [custom.cross_mark]
+# command = "echo  "
+# when = "true"
+# style = "fg:#d4ac0d"
 
 #------------------------PROMPT 2-----------------------------#
 # "$schema" = 'https://starship.rs/config-schema.json'

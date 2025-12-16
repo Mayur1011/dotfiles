@@ -148,8 +148,8 @@ return {
     priority = 1000,
     config = function()
         require("cold").setup({
-            disable_background = true, -- disables background color (for transparency)
-            disable_float_background = true, -- makes floating windows transparent too
+            disable_background = false, -- disables background color (for transparency)
+            disable_float_background = false, -- makes floating windows transparent too
         })
         vim.cmd("colorscheme cold")
 
