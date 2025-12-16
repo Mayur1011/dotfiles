@@ -5,11 +5,11 @@
 
 /* You can also override specific colors here if you like */
 * {
-    background: #040b08;
-    background-alt: #040b08;
-    foreground: #c0c2c1;
-    selected: #aa583d;
-    active: #72705c;
-    urgent: #9D8E6F;
+    background: #101212;
+    background-alt: #101212;
+    foreground: #c3c3c3;
+    selected: #9cada8;
+    active: #9bada8;
+    urgent: #a1aca5;
 }
 
