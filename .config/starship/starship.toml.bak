@@ -1,0 +1,197 @@
+add_newline = false
+format = """[$custom](dimmed white) $username:$directory $git_branch$git_status| """
+
+[custom.time]
+command = 'date +"[%H:%M]"'
+when = "true"
+format = "[$output]($style)"
+style = "dimmed white"
+
+[username]
+show_always = true
+format = "[$user]($style)"
+style_user = "#b8c2bb"
+
+[directory]
+format = "[$path]($style)"
+style = "yellow bold" truncation_length = 1
+truncate_to_repo = false
+
+# [git_branch]
+# format = " [(]($style)[$branch]($style)[ %)]($style)"
+# style = "yellow bold"
+#
+# [git_status]
+# disabled = true
+
+[git_branch]
+format = '[\($branch\)]($style)'
+style = "#8abeb7"
+
+
+[git_status]
+format = "[$all_status]($style) "
+style = "#8abeb7"
+
+
+#------------------------PROMPT 1-----------------------------#
+# add_newline = false
+# format = "$character$directory$git_branch$git_status$custom "
+#
+# palette = 'nord'
+#
+# [palettes.nord]
+# red = "#cc6666"
+# green = "#8abeb7"
+# yellow = "#f0c674"
+#
+# [directory]
+# style = "fg:#fdfefe"
+# format = "[$path ]($style)"
+# truncation_length = 1
+#
+# [git_branch]
+# # format = 'git:\([$branch\)]($style)'
+# format = '[git:\(](fg:#45b39d)[$branch](fg:purple)[\)](fg:#45b39d)'
+# style = "purple"
+#
+# [git_status]
+# format = "[$all_status]($style) "
+# style = "red"
+#
+# [character]
+# success_symbol = "[](fg:green)"
+# error_symbol = "[](fg:red)"
+#
+# [custom.cross_mark]
+# command = "echo  "
+# when = "true"
+# style = "fg:#d4ac0d"
+
+#------------------------PROMPT 2-----------------------------#
+# "$schema" = 'https://starship.rs/config-schema.json'
+#
+# format = """
+# [╭](bold overlay1)\
+# $directory\
+# $git_branch\
+# $git_status\
+# $fill\
+# $time\
+# $line_break$character"""
+#
+# palette = 'nord'
+#
+# [palettes.nord]
+# rosewater = "#f0c674"
+# flamingo = "#cc6666"
+# pink = "#b294bb"
+# orange = "#de935f"
+# red = "#cc6666"
+# maroon = "#a54242"
+# peach = "#d08770"
+# yellow = "#f0c674"
+# green = "#8abeb7"
+# teal = "#8abeb7"
+# sky = "#81a2be"
+# sapphire = "#81a2be"
+# blue = "#5e81ac"
+# lavender = "#b48ead"
+# text = "#d8dee9"
+# subtext1 = "#e5e9f0"
+# subtext0 = "#eceff4"
+# overlay2 = "#4c566a"
+# overlay1 = "#434c5e"
+# overlay0 = "#3b4252"
+# surface2 = "#2e3440"
+# surface1 = "#2e3440"
+# surface0 = "#2e3440"
+# base = "#2e3440"
+# mantle = "#3b4252"
+# crust = "#434c5e"
+#
+# # OS Module
+# [os]
+# disabled = false
+# style = "fg:text"
+#
+# [os.symbols]
+# Windows = "󰍲"
+# Ubuntu = "󰕈"
+# SUSE = ""
+# Raspbian = "󰐿"
+# Mint = "󰣭"
+# Macos = ""
+# Manjaro = ""
+# Linux = "󰌽"
+# Gentoo = "󰣨"
+# Fedora = "󰣛"
+# Alpine = ""
+# Amazon = ""
+# Android = ""
+# Arch = "󰣇"
+# Artix = "󰣇"
+# CentOS = ""
+# Debian = "󰣚"
+# Redhat = "󱄛"
+# RedHatEnterprise = "󱄛"
+#
+# # Username Module
+# [username]
+# show_always = true
+# style_user = "fg:blue"
+# style_root = "fg:blue"
+# format = '[ $user ]($style)'
+#
+# # Directory Module
+# [directory]
+# style = "fg:peach"
+# format = "[ $path ]($style)"
+# truncation_length = 3
+# truncation_symbol = "…/"
+#
+# [directory.substitutions]
+# "Documents" = "󰈙 "
+# "Downloads" = " "
+# "Music" = "󰝚 "
+# "Pictures" = " "
+# "Developer" = "󰲋 "
+#
+# # Git Branch Module
+# [git_branch]
+# symbol = ""
+# style = "fg:teal"
+# format = '[[ $symbol $branch ](fg:green)]($style)'
+#
+# # Git Status Module
+# [git_status]
+# style = "fg:teal"
+# format = '[[($all_status$ahead_behind )](fg:green)]($style)'
+#
+# # Node.js Module
+# [nodejs]
+# symbol = ""
+# style = "fg:teal"
+# format = '[[ $symbol( $version) ](fg:teal)]($style)'
+#
+# # Time Module
+# [time]
+# disabled = false
+# time_format = "%R"
+# style = "fg:peach"
+# format = '[[  $time ](fg:purple)]($style)'
+#
+# [fill]
+# symbol = '─'
+# style = 'fg:current_line'
+#
+# # Line Break Module
+# [line_break]
+# disabled = false
+#
+# # Character Module
+# [character]
+# format = """
+# [╰─$symbol](fg:overlay1) """
+# success_symbol = '[](fg:bold text)'
+# error_symbol = '[×](fg:bold red)'
