@@ -39,5 +39,11 @@ alias z=zellij
 # To add support for TTYs this line can be optionally added.
 # source ~/.cache/wal/colors-tty.sh
 
+#-------------------------------------------------------- STARSHIP ---------------------------------------------------------#
 eval "$(starship init bash)"
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
+
+. "$HOME/.cargo/env"
+
+eval "$(zd init bash)"
+# https://github.com/deorbil/zd.git
