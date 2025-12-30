@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
 
-echo "$HOME"
-find "$HOME/" -maxdepth 1 -type d # [!code ++]
+find "$HOME/Documents/" -type d # [!code ++]
