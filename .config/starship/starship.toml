@@ -4,15 +4,15 @@ format = """[$custom](dimmed white) $username:$directory $git_branch$git_status|
 palette = "nord"
 
 [palettes.nord]
-color1 = "#a4c9fe"
-color2 = "#00315c"
-color3 = "#c3c6cf"
-color4 = "#1d2024"
-color5 = "#00315c"
-color6 = "#111318"
-color7 = "#111318"
-color8 = "#a4c9fe"
-color9 = "#d9bde3"
+color1 = "#b6c4ff"
+color2 = "#1d2d61"
+color3 = "#c6c6d0"
+color4 = "#1e1f25"
+color5 = "#1d2d61"
+color6 = "#121318"
+color7 = "#121318"
+color8 = "#b6c4ff"
+color9 = "#e3bada"
 
 [custom.time]
 command = 'date +"[%H:%M]"'
