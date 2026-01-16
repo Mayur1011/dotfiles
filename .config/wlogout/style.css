@@ -10,7 +10,7 @@ window {
     font-family: GeistMono Nerd Font Propo;
     font-size: 15pt;
     color:  @background; /* text */
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 1);
 } 
 
 button {
@@ -22,7 +22,7 @@ button {
     animation: gradient_f 20s ease-in infinite;
     transition: all 0.3s ease-in;
     box-shadow: 0 0 10px 2px transparent;
-    margin: 150px 10px;
+    margin: 230px 5px;
 }
 button:focus,
 button:hover {
