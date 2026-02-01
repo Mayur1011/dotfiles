@@ -46,3 +46,9 @@ export STARSHIP_CONFIG=~/.config/starship/starship.toml
 
 eval "$(zd init bash)"
 # https://github.com/deorbil/zd.git
+
+
+#--------------------------------------------------------- JAVA PATH --------------------------------------------------------#
+alias java17='export JAVA_HOME=/usr/lib/jvm/jdk-17.0.12-oracle-x64; export PATH=$JAVA_HOME/bin:${PATH#*:}; java --version && javac --version'
+alias java25='export JAVA_HOME=/usr/lib/jvm/java-25-openjdk; export PATH=$JAVA_HOME/bin:${PATH#*:}; java --version && javac --version'
+alias graalvm='export JAVA_HOME=/usr/lib/jvm/graalvm-community-openjdk-21.0.2+13.1; export PATH=$JAVA_HOME/bin:$PATH; java --version && javac --version'
