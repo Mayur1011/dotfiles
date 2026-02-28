@@ -52,3 +52,8 @@ eval "$(zd init bash)"
 alias java17='export JAVA_HOME=/usr/lib/jvm/jdk-17.0.12-oracle-x64; export PATH=$JAVA_HOME/bin:${PATH#*:}; java --version && javac --version'
 alias java25='export JAVA_HOME=/usr/lib/jvm/java-25-openjdk; export PATH=$JAVA_HOME/bin:${PATH#*:}; java --version && javac --version'
 alias graalvm='export JAVA_HOME=/usr/lib/jvm/graalvm-community-openjdk-21.0.2+13.1; export PATH=$JAVA_HOME/bin:$PATH; java --version && javac --version'
+
+
+export PYTHON=python3.11
+export PATH=$PATH:$HOME/Documents/IITB/SEMINAR/mx
+export JAVA_HOME=/usr/lib/jvm/graalvm-community-openjdk-21.0.2+13.1

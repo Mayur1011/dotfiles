@@ -73,32 +73,32 @@
 --     end
 -- }
 
-return {
-    "metalelf0/black-metal-theme-neovim",
-    lazy = false,
-    priority = 1000,
-    config = function()
-        require("black-metal").setup({
-            -- optional configuration here
-            theme = "emperor",
-            disable_background = true, -- disables background color (for transparency)
-            disable_float_background = true, -- makes floating windows transparent too
-        })
-        -- require("black-metal").load()
-
-        -- vim.cmd.colorscheme("emperor")
-        vim.cmd.colorscheme("gorgoroth")
-
-        -- Optional: clear background for Normal and Float explicitly
-        vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-        vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-        vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
-        vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
-        vim.api.nvim_set_hl(0, "VertSplit", { bg = "none" })
-        vim.api.nvim_set_hl(0, "StatusLine", { bg = "none" })
-
-    end,
-}
+-- return {
+--     "metalelf0/black-metal-theme-neovim",
+--     lazy = false,
+--     priority = 1000,
+--     config = function()
+--         require("black-metal").setup({
+--             -- optional configuration here
+--             theme = "emperor",
+--             disable_background = true, -- disables background color (for transparency)
+--             disable_float_background = true, -- makes floating windows transparent too
+--         })
+--         -- require("black-metal").load()
+--
+--         -- vim.cmd.colorscheme("emperor")
+--         vim.cmd.colorscheme("gorgoroth")
+--
+--         -- Optional: clear background for Normal and Float explicitly
+--         vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+--         vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+--         vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
+--         vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
+--         vim.api.nvim_set_hl(0, "VertSplit", { bg = "none" })
+--         vim.api.nvim_set_hl(0, "StatusLine", { bg = "none" })
+--
+--     end,
+-- }
 
 -- return {
 --     "rose-pine/neovim",
@@ -283,4 +283,47 @@ return {
 --     -- setup must be called before loading
 --     vim.cmd.colorscheme "catppuccin"
 --   end
+-- }
+
+return {
+  "webhooked/kanso.nvim",
+  lazy = false,
+  priority = 1000,
+  config = function()
+    require("kanso").setup({
+      bold = true,
+      italic = false,
+      transparent = true,         -- do not set background color
+      terminalColors = true,
+      background = {
+        light = "pearl",
+        dark = "zen",
+      },
+      minimal = true,
+    })
+    vim.cmd.colorscheme("kanso")
+    vim.defer_fn(function ()
+      for _, group in ipairs({
+        "DiagnosticUnderlineError",
+        "DiagnosticUnderlineWarn",
+        "DiagnosticUnderlineInfo",
+        "DiagnosticUnderlineHint",
+      }) do 
+      local hl = vim.api.nvim_get_hl(0, { name = group })
+      hl.underline = true
+      hl.undercurl = false
+      hl.bold = false
+      vim.api.nvim_set_hl(0, group, hl)
+    end
+  end, 50)
+end,
+}
+
+-- return {
+--   'aikhe/fleur.nvim',
+--   lazy = false,
+--   priority = 1000,
+--   config = function()
+--     vim.cmd("colorscheme fleur")
+--   end,
 -- }
