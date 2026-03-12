@@ -33,205 +33,80 @@
 @import 'colors.css';
 
 * {
-    font-family:  "GeistMono Nerd Font Propo";
-    /* font-weight: bolder; */
-    font-size: 12px;
-    min-height: 12px;
+  /* all: unset; */
+  background: transparent;
+  font-family:  "GeistMono Nerd Font Propo";
+  /* font-weight: bold; */
+  /* font-size: 12px; */
+  min-height: 12px;
 }
 
-window#waybar {
-    background-color: #000000;
-    /* background-color: transparent; */
-    transition-property: background-color;
-    transition-duration: 0.5s;
+menu {
+  background: #000000;
 }
 
-/*
-window#waybar.solo {
-background-color: #FFFFFF;
-}
-*/
-
-button {
-    /* Use box-shadow instead of border so the text isn't offset */
-    box-shadow: inset 0 -3px transparent;
-    /* Avoid rounded borders under each button name */
-    border: none;
-    border-radius: 0;
-}
-
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
-
-#workspaces button:hover {
-    color: @primary_fixed;
-    box-shadow: inherit;
-    text-shadow: inherit;
-    background: @crust;
-    border: @crust;
-}
-
-#workspaces button.empty {
-    color: #44475a
-}
-
-#workspaces button {
-    padding: 0px 0px;
-    color: @outline;
-    /* margin: 4px 0 4px 0; */
-    transition: color 200ms ease-in-out;
-}
-
-#workspaces button.selected {
-    color: @blue;
-}
-
-#workspaces button.active {
-    color: @primary;
-}
-
-#workspaces button.urgent {
-    color: @error;
-}
-
-#image {
-    margin: 4px 0 4px 10px;
-}
-
-
-#battery {
-    padding: 0 2px;
-    color: @text;
-}
-
-#cpu,
-#memory,
-#disk,
-#temperature,
-#backlight,
-#network.disconnected,
-#wireplumber,
-#custom-pacman,
-#custom-swaync,
-#custom-power,
-#mode,
-#idle_inhibitor,
-#scratchpad,
-#tray,
-#pulseaudio,
-#mpd {
-    color: @text;
-}
-
-#network.wifi {
-    color: @secondary;
-}
-#clock {
-    color: @white;
-}
-
-#power-profiles-daemon.performance {;
-    color: @error_container;
-}
-#power-profiles-daemon.balanced,
-#power-profiles-daemon.power-saver {
-    color: @green;
-}
-
-
-#window,
-#workspaces {
-    margin: 0 0;
-}
-
-#window {
-    /* padding: 8px 8px; */
-}
-
-/* If workspaces is the leftmost module, reduce left margin */
-.modules-left>widget:first-child>#workspaces {
-    margin-left: 0px;
-}
-
-#custom-pacman {
-    color: @peach;
-}
-
-#pulseaudio {
-    color: @mauve;
-}
-
-#pulseaudio.muted {
-    color: @surface2;
-}
-
-#network {
-    color: @flamingo;
-}
-
-#network.disconnected {
-    color: @surface2;
-}
-
-#network.ethernet {
-    margin-right: 8px;
-    margin-left: 8px;
-}
-#battery {
-    color: #ffffff;
-}
-
-#battery.charging {
-    color: @green;
-}
-
-#battery.warning:not(.charging) {
-    color: @red;
-}
-
-#custom-power {
-    color: @maroon;
-}
-
-#bluetooth {
-    padding-right: 1px;
-    color: white;
-}
-
-#bluetooth.disabled {
-    color: @surface2;
-}
-
-#keyboard-state>label {
-    padding: 0 5px;
-}
-
-#keyboard-state>label.locked {
-    background: rgba(0, 0, 0, 0.2);
-}
-
-#scratchpad {
-    background: rgba(0, 0, 0, 0.2);
-}
-
-#scratchpad.empty {
-    background-color: transparent;
-}
-
-.modules-left {
-    /* background-color: #000000; */
-    border-radius: 0px;
-    padding: 0px 0px;
-    margin: 0px 0px 0px 5px;
+tooltip {
+  background-color: #000000;
+  border-radius: 5px;
 }
 
 .modules-center {
-    /* background-color: #000000; */
-    border-radius: 0px;
-    /* margin: 5px 0 0 10px; */
+  background-color: #000000;
+  padding: 0px 8px;
+  border-radius: 5px;
 }
 
-.modules-right {
-    /* background-color: #000000; */
-    border-radius: 0px;
-    padding: 0 0px;
-    margin: 0px 2px 0 0; }
+#clock {
+  font-weight: bold;
+}
+
+#workspaces{
+  background-color: #000000;
+  padding: 2px 4px;
+  margin: 2px 0;
+  border-radius: 5px;
+}
+
+#workspaces button {
+  background-color: @surface_container;
+  padding: 2px 4px;
+  border-radius: 5px;
+  margin: 2px 2px;
+  transition: all 300ms ease-in-out;
+  min-width: 10px;
+}
+
+#workspaces button.empty {
+  /* color: #555650; */
+  color: #5d5e5c;
+}
+
+#workspaces button.active {
+  background-color: @primary;
+  color: @inverse_primary; 
+  min-width: 20px;
+  font-weight: bold;
+  transition: none;
+}
+
+#battery {
+  background-color: @secondary;
+  margin: 6px 0;
+  padding: 0px 4px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #000000;
+  letter-spacing: -1px;
+}
+
+#battery.warning:not(.charging) {
+  background-color: @yellow;
+}
+
+#battery.critical:not(.charging) {
+  background-color: @red;
+}
+
+#battery.charging {
+  background-color: @green;
+}

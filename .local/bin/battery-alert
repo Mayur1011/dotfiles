@@ -6,7 +6,7 @@
 export DISPLAY=:0
 export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/1000/bus"
 
-WARNING_LEVEL=40
+WARNING_LEVEL=30
 CRITICAL_LEVEL=20
 
 BATTERY_INFO=$(acpi -b | grep "Battery 0")
