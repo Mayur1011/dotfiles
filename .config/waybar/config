@@ -4,7 +4,7 @@
   "spacing": 15,
   "margin": 1,
 
-  "modules-center": ["clock", "hyprland/workspaces", "tray", "network", "bluetooth", "battery"],
+  "modules-center": ["clock", "hyprland/workspaces", "tray", "bluetooth", "battery"],
   
 
   "clock": {

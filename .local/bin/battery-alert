@@ -4,7 +4,7 @@
 # Uses threshold-crossing detection
 
 export DISPLAY=:0
-export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/1000/bus"
+export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u)/bus"
 
 WARNING_LEVEL=30
 CRITICAL_LEVEL=20
@@ -30,6 +30,13 @@ echo "$BATTERY_LEVEL" > "$STATE_FILE"
 
 # Fully charged notification (crossing 100% while charging is ignored here)
 
+# notify() {
+#     DISPLAY=:0 DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/$(id -u)/bus \
+#     notify-send "$@"
+# }
+#
+# notify "Low Battery" "${BATTERY_LEVEL}% remaining"
+
 # Critical threshold crossed
 if [ "$BATTERY_LEVEL" -le "$CRITICAL_LEVEL" ]; then
     echo "Sending critical battery notification"
@@ -42,8 +49,7 @@ fi
 # Warning threshold crossed
 if [ "$BATTERY_LEVEL" -le "$WARNING_LEVEL" ]; then
     echo "Sending low battery notification"
-    notify-send "Low Battery" \
+    notify-send -i battery-caution "Low Battery" \
         "${BATTERY_LEVEL}% of battery remaining." \
         -u normal -r 9991 -t 5000
 fi
-
