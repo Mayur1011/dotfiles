@@ -140,32 +140,32 @@
 --     end
 -- }
 
--- return {
---     "gmr458/cold.nvim",
---     lazy = false,
---     priority = 1000,
---     config = function()
---         require("cold").setup({
---             disable_background = false, -- disables background color (for transparency)
---             disable_float_background = false, -- makes floating windows transparent too
---         })
---         vim.cmd("colorscheme cold")
---
---         -- Optional: clear background for Normal and Float explicitly
---         vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
---         vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
---         vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
---         vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
---         vim.api.nvim_set_hl(0, "VertSplit", { bg = "none" })
---         vim.api.nvim_set_hl(0, "StatusLine", { bg = "none" })
---     end
--- }
+return {
+    "gmr458/cold.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+        require("cold").setup({
+            disable_background = false, -- disables background color (for transparency)
+            disable_float_background = false, -- makes floating windows transparent too
+        })
+        vim.cmd("colorscheme cold")
+
+        -- Optional: clear background for Normal and Float explicitly
+        vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+        vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+        vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
+        vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
+        vim.api.nvim_set_hl(0, "VertSplit", { bg = "none" })
+        vim.api.nvim_set_hl(0, "StatusLine", { bg = "none" })
+    end
+}
 
 -- return {
 --     "zenbones-theme/zenbones.nvim",
---     -- Optionally install Lush. Allows for more configuration or extending the colorscheme
---     -- If you don't want to install lush, make sure to set g:zenbones_compat = 1
---     -- In Vim, compat mode is turned on as Lush only works in Neovim.
+--     -- optionally install lush. allows for more configuration or extending the colorscheme
+--     -- if you don't want to install lush, make sure to set g:zenbones_compat = 1
+--     -- in vim, compat mode is turned on as lush only works in neovim.
 --     dependencies = "rktjmp/lush.nvim",
 --     lazy = false,
 --     priority = 1000,
@@ -178,146 +178,49 @@
 --         vim.g.zenbones_darken_comments = 45
 --         -- vim.cmd.colorscheme('neobones')
 --         vim.cmd.colorscheme('zenwritten')
---         -- Optional: clear background for Normal and Float explicitly
---         vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
---         vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
---         vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
---         vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
---         vim.api.nvim_set_hl(0, "VertSplit", { bg = "none" })
---         vim.api.nvim_set_hl(0, "StatusLine", { bg = "none" })
+--         -- optional: clear background for normal and float explicitly
+--         vim.api.nvim_set_hl(0, "normal", { bg = "none" })
+--         vim.api.nvim_set_hl(0, "normalfloat", { bg = "none" })
+--         vim.api.nvim_set_hl(0, "normalnc", { bg = "none" })
+--         vim.api.nvim_set_hl(0, "signcolumn", { bg = "none" })
+--         vim.api.nvim_set_hl(0, "vertsplit", { bg = "none" })
+--         vim.api.nvim_set_hl(0, "statusline", { bg = "none" })
 --     end
 -- }
 
 -- return {
---   "neanias/everforest-nvim",
---   version = false,
+--   "webhooked/kanso.nvim",
 --   lazy = false,
---   priority = 1000, -- make sure to load this before all the other start plugins
---   -- Optional; default configuration will be used if setup isn't called.
---   config = function()
---     require("everforest").setup({
---       transparent_background_level = 2,
---     })
---     vim.cmd.colorscheme("everforest")
---   end,
--- }
-
--- return {
---   "catppuccin/nvim",
---   name = "catppuccin",
 --   priority = 1000,
 --   config = function()
---
---     require("catppuccin").setup({
---       flavour = "auto", -- latte, frappe, macchiato, mocha
---       background = { -- :h background
---         light = "latte",
---         dark = "mocha",
+--     require("kanso").setup({
+--       bold = true,
+--       italic = false,
+--       transparent = true,         -- do not set background color
+--       terminalColors = true,
+--       background = {
+--         light = "pearl",
+--         dark = "zen",
 --       },
---       transparent_background = true, -- disables setting the background color.
---       float = {
---         transparent = true, -- enable transparent floating windows
---         solid = true, -- use solid styling for floating windows, see |winborder|
---       },
---       show_end_of_buffer = false, -- shows the '~' characters after the end of buffers
---       term_colors = true, -- sets terminal colors (e.g. `g:terminal_color_0`)
---       dim_inactive = {
---         enabled = false, -- dims the background color of inactive window
---         shade = "dark",
---         percentage = 0.15, -- percentage of the shade to apply to the inactive window
---       },
---       no_italic = false, -- Force no italic
---       no_bold = false, -- Force no bold
---       no_underline = false, -- Force no underline
---       styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
---         comments = { "italic" }, -- Change the style of comments
---         conditionals = { "italic" },
---         loops = {},
---         functions = {},
---         keywords = {},
---         strings = {},
---         variables = {},
---         numbers = {},
---         booleans = {},
---         properties = {},
---         types = {},
---         operators = {},
---         -- miscs = {}, -- Uncomment to turn off hard-coded styles
---       },
---       lsp_styles = { -- Handles the style of specific lsp hl groups (see `:h lsp-highlight`).
---         virtual_text = {
---           errors = { "italic" },
---           hints = { "italic" },
---           warnings = { "italic" },
---           information = { "italic" },
---           ok = { "italic" },
---         },
---         underlines = {
---           errors = { "underline" },
---           hints = { "underline" },
---           warnings = { "underline" },
---           information = { "underline" },
---           ok = { "underline" },
---         },
---         inlay_hints = {
---           background = true,
---         },
---       },
---       color_overrides = {},
---       custom_highlights = {},
---       default_integrations = true,
---       auto_integrations = false,
---       integrations = {
---         cmp = true,
---         gitsigns = true,
---         nvimtree = true,
---         notify = false,
---         mini = {
---           enabled = true,
---           indentscope_color = "",
---         },
---         -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
---       },
+--       minimal = true,
 --     })
---
---     -- setup must be called before loading
---     vim.cmd.colorscheme "catppuccin"
---   end
+--     vim.cmd.colorscheme("kanso")
+--     vim.defer_fn(function ()
+--       for _, group in ipairs({
+--         "DiagnosticUnderlineError",
+--         "DiagnosticUnderlineWarn",
+--         "DiagnosticUnderlineInfo",
+--         "DiagnosticUnderlineHint",
+--       }) do 
+--       local hl = vim.api.nvim_get_hl(0, { name = group })
+--       hl.underline = true
+--       hl.undercurl = false
+--       hl.bold = false
+--       vim.api.nvim_set_hl(0, group, hl)
+--     end
+--   end, 50)
+-- end,
 -- }
-
-return {
-  "webhooked/kanso.nvim",
-  lazy = false,
-  priority = 1000,
-  config = function()
-    require("kanso").setup({
-      bold = true,
-      italic = false,
-      transparent = true,         -- do not set background color
-      terminalColors = true,
-      background = {
-        light = "pearl",
-        dark = "zen",
-      },
-      minimal = true,
-    })
-    vim.cmd.colorscheme("kanso")
-    vim.defer_fn(function ()
-      for _, group in ipairs({
-        "DiagnosticUnderlineError",
-        "DiagnosticUnderlineWarn",
-        "DiagnosticUnderlineInfo",
-        "DiagnosticUnderlineHint",
-      }) do 
-      local hl = vim.api.nvim_get_hl(0, { name = group })
-      hl.underline = true
-      hl.undercurl = false
-      hl.bold = false
-      vim.api.nvim_set_hl(0, group, hl)
-    end
-  end, 50)
-end,
-}
 
 -- return {
 --   'aikhe/fleur.nvim',
