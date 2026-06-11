@@ -31,3 +31,12 @@ output_path = '~/.config/starship/starship.toml'
 input_path = '~/.config/matugen/templates/dunstrc-colors'
 output_path = '~/.config/dunst/dunstrc'
 post_hook = 'dunstctl reload'
+
+[templates.vicinae]
+input_path = './templates/vicinae.toml'
+output_path = '~/.local/share/vicinae/themes/matugen.toml'
+post_hook = 'vicinae theme set matugen'
+
+[templates.hyprcrop]
+input_path = '~/.config/matugen/templates/matugen-hyprcrop.toml'
+output_path = '~/.config/hyprcrop/config.toml'

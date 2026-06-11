@@ -57,3 +57,7 @@ alias graalvm='export JAVA_HOME=/usr/lib/jvm/graalvm-community-openjdk-21.0.2+13
 export PYTHON=python3.11
 export PATH=$PATH:$HOME/Documents/IITB/SEMINAR/mx
 export JAVA_HOME=/usr/lib/jvm/graalvm-community-openjdk-21.0.2+13.1
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
